@@ -1,0 +1,6 @@
+*.xcscheme
+cocos2d/build/
+proj.ios_mac/
+
+
+
