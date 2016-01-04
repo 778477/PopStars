@@ -17,6 +17,9 @@ public:
     static cocos2d::Scene* createScene();
     
     bool init();
+    
+    void menuStartCallback(cocos2d::Ref* sender);
+    void menuAboutCallback(cocos2d::Ref* sender);
 };
 
 #endif /* MainPlayScene_hpp */
