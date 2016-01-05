@@ -69,6 +69,7 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		E59684181C32BE81005830BE /* MainPlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59684161C32BE81005830BE /* MainPlayScene.cpp */; };
 		E596841B1C3A9F6D005830BE /* PopStarsGameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E59684191C3A9F6D005830BE /* PopStarsGameScene.cpp */; };
+		E596841E1C3C0104005830BE /* StarSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E596841C1C3C0104005830BE /* StarSprite.cpp */; };
 		EDD7E3241B58AE00009F9DEB /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD7E3231B58AE00009F9DEB /* libiconv.dylib */; };
 		EDD7E3261B58AE07009F9DEB /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD7E3251B58AE07009F9DEB /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -167,6 +168,8 @@
 		E59684171C32BE81005830BE /* MainPlayScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainPlayScene.hpp; sourceTree = "<group>"; };
 		E59684191C3A9F6D005830BE /* PopStarsGameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PopStarsGameScene.cpp; sourceTree = "<group>"; };
 		E596841A1C3A9F6D005830BE /* PopStarsGameScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PopStarsGameScene.hpp; sourceTree = "<group>"; };
+		E596841C1C3C0104005830BE /* StarSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StarSprite.cpp; sourceTree = "<group>"; };
+		E596841D1C3C0104005830BE /* StarSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StarSprite.hpp; sourceTree = "<group>"; };
 		EDD7E3231B58AE00009F9DEB /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		EDD7E3251B58AE07009F9DEB /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -305,12 +308,9 @@
 			children = (
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
-				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
-				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
-				E59684161C32BE81005830BE /* MainPlayScene.cpp */,
-				E59684171C32BE81005830BE /* MainPlayScene.hpp */,
-				E59684191C3A9F6D005830BE /* PopStarsGameScene.cpp */,
-				E596841A1C3A9F6D005830BE /* PopStarsGameScene.hpp */,
+				E596841F1C3C011C005830BE /* Scenes */,
+				E596841C1C3C0104005830BE /* StarSprite.cpp */,
+				E596841D1C3C0104005830BE /* StarSprite.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -363,6 +363,19 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		E596841F1C3C011C005830BE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
+				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				E59684161C32BE81005830BE /* MainPlayScene.cpp */,
+				E59684171C32BE81005830BE /* MainPlayScene.hpp */,
+				E59684191C3A9F6D005830BE /* PopStarsGameScene.cpp */,
+				E596841A1C3A9F6D005830BE /* PopStarsGameScene.hpp */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,11 +422,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				TargetAttributes = {
-					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = MDDB52YB8L;
-					};
-				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PopStars" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -509,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E596841E1C3C0104005830BE /* StarSprite.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				E596841B1C3A9F6D005830BE /* PopStarsGameScene.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
@@ -575,7 +584,7 @@
 					"$(_COCOS_LIB_IOS_END)",
 				);
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
 			};
@@ -609,7 +618,7 @@
 					"$(_COCOS_LIB_IOS_END)",
 				);
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
 			};

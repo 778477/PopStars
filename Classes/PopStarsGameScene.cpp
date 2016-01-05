@@ -7,7 +7,7 @@
 //
 
 #include "PopStarsGameScene.hpp"
-
+#include "StarSprite.hpp"
 using namespace cocos2d;
 using namespace std;
 
@@ -38,6 +38,11 @@ bool PopStarsGameScene::init(){
     Menu *menu = Menu::create(item, NULL);
     menu->alignItemsVertically();
     this->addChild(menu);
+    
+    auto star = StarSprite::create("res/star.png");
+    star->setPosition(200, 230);
+    this->addChild(star);
+    
     
     return true;
 }

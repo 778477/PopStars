@@ -47,8 +47,10 @@ bool MainPlayScene::init(){
 #pragma mark - Menu Callback
 void MainPlayScene::menuStartCallback(cocos2d::Ref *sender){
     printf("tap on menu start item\n");
-    
-    Director::getInstance()->pushScene(PopStarsGameScene::createScene());
+    auto sc = PopStarsGameScene::createScene();
+    // 转场动画
+    auto actionSc = TransitionFadeTR::create(1.f, sc);
+    Director::getInstance()->pushScene(actionSc);
 }
 
 void MainPlayScene::menuAboutCallback(cocos2d::Ref *sender){
