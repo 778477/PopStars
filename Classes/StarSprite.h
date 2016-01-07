@@ -11,9 +11,10 @@
 #include "cocos2d.h"
 
 class StarSprite : public cocos2d::Sprite{
-//public:
-//    static Sprite* create();
-//    bool init();
+public:
+    static StarSprite* create(cocos2d::Color3B color,cocos2d::Size size);
+    
+    bool init();
 };
 
 #endif /* StarSprite_hpp */

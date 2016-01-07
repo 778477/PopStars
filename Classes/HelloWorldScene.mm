@@ -1,5 +1,5 @@
 #include "HelloWorldScene.h"
-
+#include "CCGeometry.h"
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -27,7 +27,7 @@ bool HelloWorld::init()
         return false;
     }
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
+    cocos2d::Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
     /////////////////////////////

@@ -6,8 +6,8 @@
 //
 //
 
-#include "MainPlayScene.hpp"
-#include "PopStarsGameScene.hpp"
+#include "MainPlayScene.h"
+#include "PopStarsGameScene.h"
 
 using namespace cocos2d;
 using namespace std;
